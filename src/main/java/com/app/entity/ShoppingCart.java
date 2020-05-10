@@ -8,12 +8,12 @@ import java.util.*;
 
 public class ShoppingCart {
     private List<ShoppingCartItem> shoppingCartItems = new ArrayList<ShoppingCartItem>();
-    private Double totalAmount = 0.0;
-    private Double totalAmountAfterDiscounts = 0.0;
+    private double totalAmount = 0.0;
+    private double totalAmountAfterDiscounts = 0.0;
     private Coupon coupon;
-    private Double couponDiscount;
+    private double couponDiscount;
     private List<Campaign> campaigns = new ArrayList<Campaign>();
-    private Double campaignDiscount;
+    private double campaignDiscount;
     private DeliveryCostCalculator deliveryCostCalculator;
     private CampaignDiscountCalculator campaignDiscountCalculator;
     private CouponDiscountCalculator couponDiscountCalculator;
@@ -36,19 +36,19 @@ public class ShoppingCart {
         this.shoppingCartItems = shoppingCartItems;
     }
 
-    public Double getTotalAmount() {
+    public double getTotalAmount() {
         return totalAmount;
     }
 
-    public void setTotalAmount(Double totalAmount) {
+    public void setTotalAmount(double totalAmount) {
         this.totalAmount = totalAmount;
     }
 
-    public Double getTotalAmountAfterDiscounts() {
+    public double getTotalAmountAfterDiscounts() {
         return totalAmountAfterDiscounts;
     }
 
-    public void setTotalAmountAfterDiscounts(Double totalAmountAfterDiscounts) {
+    public void setTotalAmountAfterDiscounts(double totalAmountAfterDiscounts) {
         this.totalAmountAfterDiscounts = totalAmountAfterDiscounts;
     }
 
@@ -60,11 +60,11 @@ public class ShoppingCart {
         this.coupon = coupon;
     }
 
-    public Double getCouponDiscount() {
+    public double getCouponDiscount() {
         return couponDiscount;
     }
 
-    public void setCouponDiscount(Double couponDiscount) {
+    public void setCouponDiscount(double couponDiscount) {
         this.couponDiscount = couponDiscount;
     }
 
@@ -76,11 +76,11 @@ public class ShoppingCart {
         this.campaigns = campaigns;
     }
 
-    public Double getCampaignDiscount() {
+    public double getCampaignDiscount() {
         return campaignDiscount;
     }
 
-    public void setCampaignDiscount(Double campaignDiscount) {
+    public void setCampaignDiscount(double campaignDiscount) {
         this.campaignDiscount = campaignDiscount;
     }
 
@@ -101,7 +101,7 @@ public class ShoppingCart {
         this.setTotalAmount(this.getTotalAmount() + product.getPrice() * quantity);
     }
 
-    public Double getDeliveryCost() {
+    public double getDeliveryCost() {
         return this.deliveryCostCalculator.calculateFor(this);
     }
 

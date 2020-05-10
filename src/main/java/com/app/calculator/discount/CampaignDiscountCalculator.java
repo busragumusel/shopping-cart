@@ -40,7 +40,8 @@ public class CampaignDiscountCalculator implements DiscountCalculator {
                 applicableCampaignList.put(campaignTotalDiscount, campaign);
             }
         }
-        return Collections.max(applicableCampaignList.keySet());
+
+        return applicableCampaignList.size() > 0 ? Collections.max(applicableCampaignList.keySet()) : 0;
     }
 
     private List<ShoppingCartItem> getCartItemsByCategory(List<ShoppingCartItem> shoppingCartItems, Category category) {

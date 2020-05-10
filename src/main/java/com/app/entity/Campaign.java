@@ -4,7 +4,7 @@ import com.app.calculator.discount.type.DiscountType;
 
 public class Campaign extends Discount {
     private Category category;
-    private Double discount;
+    private double discount;
     private int numberOfProducts;
 
     public Campaign(Category category, int numberOfProducts, double discountAmount, DiscountType discountType) {
@@ -21,11 +21,11 @@ public class Campaign extends Discount {
         this.category = category;
     }
 
-    public Double getDiscount() {
+    public double getDiscount() {
         return discount;
     }
 
-    public void setDiscount(Double discount) {
+    public void setDiscount(double discount) {
         this.discount = discount;
     }
 
